@@ -1,5 +1,8 @@
 {
-  "name": "wpfactory/wpf-promoting-notice",  
+  "name": "wpfactory/wpf-promoting-notice",
+  "config": {
+    "preferred-install": "dist"
+  },
   "type": "wordpress-plugin",
   "require": {
     "php": ">=7.0.0"

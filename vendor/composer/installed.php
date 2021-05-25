@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '90fed8e1187e56ae4d6a8c46c05d6408b22f7e49',
+    'reference' => 'b92e5b4edfc12b3b516607a98f330fd548cffffa',
     'name' => 'wpfactory/wpf-promoting-notice',
   ),
   'versions' => 
@@ -18,7 +18,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '90fed8e1187e56ae4d6a8c46c05d6408b22f7e49',
+      'reference' => 'b92e5b4edfc12b3b516607a98f330fd548cffffa',
     ),
   ),
 );
