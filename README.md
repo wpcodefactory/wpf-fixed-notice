@@ -79,6 +79,4 @@ Parameter | Default value | Description
 **%btn_call_to_action%** | `__( 'Upgrade to Pro version', 'wpf-promoting-notice' )` |  Button call to action
 **%main_text%** | `__( 'Disabled options can be unlocked using <a href="%pro_version_url%" target="_blank"><strong>%pro_version_title%</strong></a>', 'wpf-promoting-notice' )` |  Main text
 **%main_text_style%** | `'vertical-align: middle;margin:0 14px 0 0;'` |  Main text style
-**%content_template%** | `'<img class="wpf-pan-plugin-icon" src="%plugin_icon_url%"/>' .
-				                            '<span class="wpf-pan-main-text">%main_text%</span>' .
-				                            '<a target="_blank" class="wpf-pan-button button-primary" href="%pro_version_url%"><i class="%btn_icon_class%"></i>%btn_call_to_action%</a>'` |  Main content of the notice
+**%content_template%** | `'<img class="wpf-pan-plugin-icon" src="%plugin_icon_url%"/>' . '<span class="wpf-pan-main-text">%main_text%</span>' . '<a target="_blank" class="wpf-pan-button button-primary" href="%pro_version_url%"><i class="%btn_icon_class%"></i>%btn_call_to_action%</a>'` |  Main content of the notice
