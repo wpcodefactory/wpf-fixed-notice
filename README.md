@@ -1,0 +1,66 @@
+# wpf-promoting-notice
+
+## Description
+A little library that does 2 things:
+1. Adds an admin notice only on the plugin's settings page advertising about the Pro version of the plugin
+2. Makes all the disabled features from the free version that eventually may get clicked point to the promoting notice
+
+### Screenshot
+
+![promoting-notice-only](https://user-images.githubusercontent.com/70968619/119685463-c301c680-be1b-11eb-8753-d146c3ba3601.png)
+
+### Installation
+
+Add this to your composer.json
+
+```json
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/wpcodefactory/wpf-promoting-notice"
+    }
+  ],
+  "require": {
+    "wpfactory/wpf-promoting-notice":"dev-master"
+  },
+```
+
+Don't forget to require the `autoload.php` to your project, as it's required for any composer library and to run `composer install`, of course :)
+
+
+### Usage
+
+```php
+add_action( 'admin_init', 'add_promoting_notice' );
+function add_promoting_notice(){
+	$promoting_notice = wpf_promoting_notice();
+	$promoting_notice->set_args( array(
+		'woocommerce_section_id' => 'alg_wc_ev',
+		'enable'                 => true,
+		'template_variables'     => array(
+			'%pro_version_url%'   => 'https://wpfactory.com/item/email-verification-for-woocommerce/',
+			'%plugin_icon_url%'   => 'https://ps.w.org/emails-verification-for-woocommerce/assets/icon-128x128.png',
+			'%pro_version_title%' => __( 'Email Verification for WooCommerce Pro', 'emails-verification-for-woocommerce' ),
+		),		
+	) );
+	$promoting_notice->init();
+}
+```
+
+
+### Arguments
+
+Parameter | Default value | Description <img width="800" />
+------------ | ------------- | ------------
+enable | `true` |  Enables the notice or not
+woocommerce_section_id | `''` | WooCommerce section id
+notice_template | `'<div id="message" class="%dynamic_notice_class% wpf-promoting-notice notice notice-info inline"><p class="wpf-pan-p">%content_template%</p></div>'` | The whole notice template
+lib_dirname | `dirname( __FILE__, 2 )` | The directory of the project
+highlight_notice_on_disabled_opt_click | `true` | Makes the disabled features that may get clicked point to the promoting notice
+template_variables | [Documentation](https://github.com/wpcodefactory/wpf-promoting-notice/wiki/Template-variable-parameters) | Template variables you can use
+
+
+
+
+### See it in action
+https://user-images.githubusercontent.com/70968619/119685412-b8473180-be1b-11eb-829d-216e1895c8da.mp4
