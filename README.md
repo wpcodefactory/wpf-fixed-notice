@@ -47,7 +47,6 @@ function add_promoting_notice(){
 }
 ```
 
-
 ### Arguments
 
 Parameter | Default value | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Description &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -58,9 +57,6 @@ notice_template | `'<div id="message" class="%dynamic_notice_class% wpf-promotin
 lib_dirname | `dirname( __FILE__, 2 )` | The directory of the project
 highlight_notice_on_disabled_opt_click | `true` | Makes the disabled features that may get clicked point to the promoting notice
 template_variables | [Documentation](https://github.com/wpcodefactory/wpf-promoting-notice/wiki/Template-variable-parameters) | Template variables you can use
-
-
-
 
 ### See it in action
 https://user-images.githubusercontent.com/70968619/119685412-b8473180-be1b-11eb-829d-216e1895c8da.mp4
