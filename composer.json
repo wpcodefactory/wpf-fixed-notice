@@ -1,8 +1,5 @@
 {
-  "name": "wpfactory/wpf-promoting-notice",    
-  "require": {
-    "php": ">=7.0.0"
-  },
+  "name": "wpfactory/wpf-promoting-notice",
   "autoload": {
     "classmap": [
       "src/php/"
