@@ -48,16 +48,16 @@ function add_promoting_notice(){
 ```
 
 
-### Parameters
+### Arguments
 
 Parameter | Default value | Description
 ------------ | ------------- | ------------
-**enable** | `true` |  Enables the notice or not
-**woocommerce_section_id** | `''` | WooCommerce section id
-**notice_template** | `'<div id="message" class="%dynamic_notice_class% wpf-promoting-notice notice notice-info inline"><p class="wpf-pan-p">%content_template%</p></div>'` | The whole notice template
-**lib_dirname** | `dirname( __FILE__, 2 )` | The directory of the project
-**highlight_notice_on_disabled_opt_click** | `true` | Makes the disabled features that may get clicked point to the promoting notice
-**template_variables** | [Documentation](https://github.com/wpcodefactory/wpf-promoting-notice/wiki/Template-variable-parameters) | Template variables you can use
+enable | `true` |  Enables the notice or not
+woocommerce_section_id | `''` | WooCommerce section id
+notice_template | `'<div id="message" class="%dynamic_notice_class% wpf-promoting-notice notice notice-info inline"><p class="wpf-pan-p">%content_template%</p></div>'` | The whole notice template
+lib_dirname | `dirname( __FILE__, 2 )` | The directory of the project
+highlight_notice_on_disabled_opt_click | `true` | Makes the disabled features that may get clicked point to the promoting notice
+template_variables | [Documentation](https://github.com/wpcodefactory/wpf-promoting-notice/wiki/Template-variable-parameters) | Template variables you can use
 
 
 
