@@ -50,7 +50,7 @@ function add_promoting_notice(){
 
 ### Arguments
 
-Parameter | Default value | Description
+Parameter | Default value | Description <img width="800" />
 ------------ | ------------- | ------------
 enable | `true` |  Enables the notice or not
 woocommerce_section_id | `''` | WooCommerce section id
