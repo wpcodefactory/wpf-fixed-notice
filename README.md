@@ -9,10 +9,6 @@ A little library that does 2 things:
 
 ![promoting-notice-only](https://user-images.githubusercontent.com/70968619/119685463-c301c680-be1b-11eb-8753-d146c3ba3601.png)
 
-
-### See it in action
-https://user-images.githubusercontent.com/70968619/119685412-b8473180-be1b-11eb-829d-216e1895c8da.mp4
-
 ### Installation
 
 Add this to your composer.json
@@ -80,3 +76,6 @@ Parameter | Default value | Description
 **%main_text%** | `__( 'Disabled options can be unlocked using <a href="%pro_version_url%" target="_blank"><strong>%pro_version_title%</strong></a>', 'wpf-promoting-notice' )` |  Main text
 **%main_text_style%** | `'vertical-align: middle;margin:0 14px 0 0;'` |  Main text style
 **%content_template%** | `'<img class="wpf-pan-plugin-icon" src="%plugin_icon_url%"/>' . '<span class="wpf-pan-main-text">%main_text%</span>' . '<a target="_blank" class="wpf-pan-button button-primary" href="%pro_version_url%"><i class="%btn_icon_class%"></i>%btn_call_to_action%</a>'` |  Main content of the notice
+
+### See it in action
+https://user-images.githubusercontent.com/70968619/119685412-b8473180-be1b-11eb-829d-216e1895c8da.mp4
