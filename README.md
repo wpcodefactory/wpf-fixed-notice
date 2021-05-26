@@ -47,6 +47,7 @@ function add_promoting_notice(){
 }
 ```
 
+
 ### Arguments
 
 Parameter | Default value | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Description &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
