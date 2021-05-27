@@ -184,7 +184,7 @@ if ( ! class_exists( 'WPFactory\Promoting_Notice' ) ) {
 			image-rendering: -webkit-optimize-contrast;
 			image-rendering: crisp-edges;
 			-ms-interpolation-mode: nearest-neighbor;';
-			$image_rendering_style = $args['plugin_icon_optimize_contrast'] ? $image_rendering_style : '';
+			$image_rendering_style = $args['optimize_plugin_icon_contrast'] ? $image_rendering_style : '';
 			?>
 			<style>
 				.wpf-pan-blink {
