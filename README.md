@@ -39,11 +39,11 @@ function add_promoting_notice(){
 		'enable'                        => true, // Probably you should apply some custom filter here that only returns true on free version
 		'optimize_plugin_icon_contrast' => true // Use true here if the plugin icon is blurry
 		'template_variables'     => array(
-			'%pro_version_url%'   => 'https://wpfactory.com/item/email-verification-for-woocommerce/',
-			'%plugin_icon_url%'   => 'https://ps.w.org/emails-verification-for-woocommerce/assets/icon-128x128.png',
-			'%pro_version_title%' => __( 'Email Verification for WooCommerce Pro', 'emails-verification-for-woocommerce' ),
-			//'%main_text%'         => __( 'Disabled options can be unlocked using <a href="%pro_version_url%" target="_blank"><strong>%pro_version_title%</strong></a>', 'emails-verification-for-woocommerce' ),
-			//'%btn_call_to_action%'   => __( 'Upgrade to Pro version', 'emails-verification-for-woocommerce' ),
+			'%pro_version_url%'    => 'https://wpfactory.com/item/email-verification-for-woocommerce/',
+			'%plugin_icon_url%'    => 'https://ps.w.org/emails-verification-for-woocommerce/assets/icon-128x128.png',
+			'%pro_version_title%'  => __( 'Email Verification for WooCommerce Pro', 'emails-verification-for-woocommerce' ),
+			//'%main_text%'          => __( 'Disabled options can be unlocked using <a href="%pro_version_url%" target="_blank"><strong>%pro_version_title%</strong></a>', 'emails-verification-for-woocommerce' ),
+			//'%btn_call_to_action%' => __( 'Upgrade to Pro version', 'emails-verification-for-woocommerce' ),
 		),		
 	) );
 	$promoting_notice->init();
