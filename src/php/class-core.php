@@ -35,7 +35,7 @@ if ( ! class_exists( 'WPFactory\Promoting_Notice' ) ) {
 				'lib_dirname'                            => dirname( __FILE__, 2 ),
 				'highlight_notice_on_disabled_opt_click' => true,
 				'template_variables'                     => array(),
-				'plugin_icon_optimize_contrast'          => false
+				'optimize_plugin_icon_contrast'          => false
 			) );
 			// Template variables
 			$args['template_variables'] = wp_parse_args( $args['template_variables'], array(
