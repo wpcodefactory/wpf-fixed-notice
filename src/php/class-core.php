@@ -118,7 +118,7 @@ if ( ! class_exists( 'WPFactory\Promoting_Notice' ) ) {
 		 */
 		function highlight_notice_on_disabled_setting_click() {
 			$args = $this->get_args();
-			if ( empty( $args['highlight_notice_on_disabled_opt_click'] ) ) {
+			if ( !( $args['highlight_notice_on_disabled_opt_click'] ) ) {
 				return;
 			}
 			?>
