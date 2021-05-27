@@ -34,7 +34,8 @@ if ( ! class_exists( 'WPFactory\Promoting_Notice' ) ) {
 				'notice_template'                        => '<div id="message" class="%dynamic_notice_class% wpf-promoting-notice notice notice-info inline"><p class="wpf-pan-p">%content_template%</p></div>',
 				'lib_dirname'                            => dirname( __FILE__, 2 ),
 				'highlight_notice_on_disabled_opt_click' => true,
-				'template_variables'                     => array()
+				'template_variables'                     => array(),
+				'plugin_icon_optimize_contrast'          => false
 			) );
 			// Template variables
 			$args['template_variables'] = wp_parse_args( $args['template_variables'], array(
@@ -42,7 +43,7 @@ if ( ! class_exists( 'WPFactory\Promoting_Notice' ) ) {
 				'%pro_version_title%'    => __( 'Awesome plugin Pro', 'wpf-promoting-notice' ),
 				'%pro_version_url%'      => 'https://wpfactory.com/item/awesome-plugin/',
 				'%plugin_icon_url%'      => 'https://pluginfactory-tastystakes.netdna-ssl.com/img/site/plugin_icon.png',
-				'%plugin_icon_style%'    => 'width:38px;margin-right:10px;vertical-align:middle',
+				'%plugin_icon_style%'    => 'width:39px;margin-right:10px;vertical-align:middle',
 				'%btn_icon_class%'       => 'wpf-pan-btn-icon dashicons-before dashicons-unlock',
 				'%btn_icon_style%'       => 'position:relative;top:3px;margin:0 2px 0 -2px;',
 				'%btn_style%'            => 'vertical-align:middle;display:inline-block;margin:0',
@@ -69,9 +70,9 @@ if ( ! class_exists( 'WPFactory\Promoting_Notice' ) ) {
 				return;
 			}
 			if ( ! empty( $args['woocommerce_section_id'] ) ) {
+				add_action( 'woocommerce_sections_' . $args['woocommerce_section_id'], array( $this, 'create_style' ) );
 				add_action( 'woocommerce_sections_' . $args['woocommerce_section_id'], array( $this, 'create_notice' ) );
 				add_action( 'woocommerce_sections_' . $args['woocommerce_section_id'], array( $this, 'highlight_notice_on_disabled_setting_click' ) );
-				add_action( 'woocommerce_sections_' . $args['woocommerce_section_id'], array( $this, 'create_style' ) );
 			}
 		}
 
@@ -177,6 +178,13 @@ if ( ! class_exists( 'WPFactory\Promoting_Notice' ) ) {
 		function create_style() {
 			$args            = $this->get_args();
 			$notice_selector = $this->get_notice_selector();
+			$image_rendering_style = '
+			image-rendering: -moz-crisp-edges;
+			image-rendering:   -o-crisp-edges;
+			image-rendering: -webkit-optimize-contrast;
+			image-rendering: crisp-edges;
+			-ms-interpolation-mode: nearest-neighbor;';
+			$image_rendering_style = $args['plugin_icon_optimize_contrast'] ? $image_rendering_style : '';
 			?>
 			<style>
 				.wpf-pan-blink {
@@ -192,6 +200,7 @@ if ( ! class_exists( 'WPFactory\Promoting_Notice' ) ) {
 
 				<?php echo esc_attr($notice_selector); ?>
 				.wpf-pan-plugin-icon {
+					<?php echo $image_rendering_style; ?>
 				<?php echo esc_attr($args['template_variables']['%plugin_icon_style%']); ?>
 				}
 
