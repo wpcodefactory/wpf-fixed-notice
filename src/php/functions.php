@@ -1,22 +1,22 @@
 <?php
 /**
- * WPF Promoting Notice - Functions
+ * WPFactory Promoting Notice - Functions.
  *
- * @version 1.0.0
+ * @version 1.0.1
  * @since   1.0.0
  * @author  WPFactory
  */
 
-if ( ! function_exists( 'wpf_promoting_notice' ) ) {
+if ( ! function_exists( 'wpfactory_promoting_notice' ) ) {
 	/**
-	 * wpf_promoting_notice
+	 * wpfactory_promoting_notice.
 	 *
-	 * @version 1.0.0
+	 * @version 1.0.1
 	 * @since   1.0.0
 	 *
 	 * @return \WPFactory\Promoting_Notice\Core
 	 */
-	function wpf_promoting_notice() {
+	function wpfactory_promoting_notice() {
 		return new \WPFactory\Promoting_Notice\Core();
 	}
 }
