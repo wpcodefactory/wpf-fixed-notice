@@ -1,4 +1,4 @@
-# WPFactory Promoting notice
+# WPFactory Promoting Notice
 
 ### Description
 A little library that does 2 things:
