@@ -1,4 +1,4 @@
-# WPF Promoting notice
+# WPFactory Promoting notice
 
 ### Description
 A little library that does 2 things:
