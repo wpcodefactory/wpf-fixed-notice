@@ -21,7 +21,7 @@ if ( ! class_exists( 'WPFactory\Promoting_Notice' ) ) {
 		/**
 		 * set_args.
 		 *
-		 * @version 1.0.3
+		 * @version 1.0.5
 		 * @since   1.0.0
 		 *
 		 * @param array $args
@@ -36,7 +36,7 @@ if ( ! class_exists( 'WPFactory\Promoting_Notice' ) ) {
 				'template_variables'                     => array(),
 				'url_requirements'                       => array(
 					'page_filename' => 'admin.php',
-					'params'        => array( 'page' => 'file-renaming-on-upload' ),
+					'params'        => array(),
 				),
 				'display_action'                         => $this->get_default_display_action( $args ),
 				'optimize_plugin_icon_contrast'          => false
