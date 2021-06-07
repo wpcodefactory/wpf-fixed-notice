@@ -63,6 +63,7 @@ notice_template | `'<div id="message" class="%notice_class%"><p class="wpfactory
 lib_dirname | `dirname( __FILE__, 2 )` | The directory of the project
 highlight_notice_on_disabled_opt_click | `true` | Makes the disabled features that may get clicked point to the promoting notice
 template_variables | [Documentation](https://github.com/wpcodefactory/wpf-promoting-notice/wiki/Template-variable-parameters) | Template variables you can use
+url_requirements | `array( 'page_filename' => 'admin.php', 'params' => array() )` | URL requirements in order to display the notice
 optimize_plugin_icon_contrast | `false` | Improves the plugin icon img contrast
 
 ### See it in action
