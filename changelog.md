@@ -1,5 +1,11 @@
 # WPFactory Promoting Notice change log
 
+## Version 1.0.5 (07/06/2021)
+* Remove default value from 'url_requirements => params 
+
+## Version 1.0.4 (07/06/2021)
+* Fix wrong display_action name 
+
 ## Version 1.0.3 (07/06/2021)
 * Add `%notice_class%` template variable.
 * Add `url_requirements` array parameter with `page_filename` and `params` parameters.
