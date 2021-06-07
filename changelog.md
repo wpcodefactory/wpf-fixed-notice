@@ -3,6 +3,7 @@
 ## Version 1.0.3 (07/06/2021)
 * Add `%notice_class%` template variable.
 * Add `url_requirements` array parameter with `page_filename` and `params` parameters.
+* Add `display_action` param in order to control the action hook responsible for displayig the notice.
 * Remove `woocommerce_section_id` parameter having `admin_notices` as default.
 * Replace some `wpf` prefixes to `wpfactory`.
 

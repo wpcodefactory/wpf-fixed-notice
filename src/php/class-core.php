@@ -38,7 +38,7 @@ if ( ! class_exists( 'WPFactory\Promoting_Notice' ) ) {
 					'page_filename' => 'admin.php',
 					'params'        => array( 'page' => 'file-renaming-on-upload' ),
 				),
-				'action_hook'                            => 'admin_notices',
+				'display_action'                         => $this->get_default_display_action( $args ),
 				'optimize_plugin_icon_contrast'          => false
 			) );
 			// Template variables
@@ -60,6 +60,30 @@ if ( ! class_exists( 'WPFactory\Promoting_Notice' ) ) {
 			) );
 			// Set args
 			$this->args = $args;
+		}
+
+		/**
+		 * get_default_display_action.
+		 *
+		 * @version 1.0.3
+		 * @since   1.0.3
+		 *
+		 * @param $args
+		 *
+		 * @return string
+		 */
+		function get_default_display_action( $args ) {
+			$action_hook = 'admin_notices';
+			if (
+				isset( $args['url_requirements']['params']['page'] )
+				&& ! empty( $page = $args['url_requirements']['params']['page'] )
+				&& isset( $args['url_requirements']['params']['tab'] )
+				&& ! empty( $tab = $args['url_requirements']['params']['tab'] )
+				&& 'wc-settings' === $page
+			) {
+				$action_hook = 'woocommerce_sections_' . $tab;
+			}
+			return $action_hook;
 		}
 
 		/**
@@ -85,9 +109,6 @@ if ( ! class_exists( 'WPFactory\Promoting_Notice' ) ) {
 				add_action( 'admin_head', array( $this, 'create_style' ) );
 				add_action( 'admin_head', array( $this, 'highlight_notice_on_disabled_setting_click' ) );
 				add_action( $args['action_hook'], array( $this, 'create_notice' ) );
-				//add_action( 'woocommerce_sections_' . $args['woocommerce_section_id'], array( $this, 'create_style' ) );
-				//add_action( 'woocommerce_sections_' . $args['woocommerce_section_id'], array( $this, 'create_notice' ) );
-				//add_action( 'woocommerce_sections_' . $args['woocommerce_section_id'], array( $this, 'highlight_notice_on_disabled_setting_click' ) );
 			}
 		}
 
@@ -117,12 +138,12 @@ if ( ! class_exists( 'WPFactory\Promoting_Notice' ) ) {
 		 * @version 1.0.0
 		 * @since   1.0.0
 		 */
-		function create_notice() {			
+		function create_notice() {
 			$args               = $this->get_args();
 			$notice             = $args['notice_template'];
 			$template_variables = $this->decode_template_variables( $args['template_variables'] );
 			$notice             = str_replace( array_keys( $template_variables ), $template_variables, $notice );
-			echo $notice;			
+			echo $notice;
 		}
 
 		/**
@@ -215,7 +236,7 @@ if ( ! class_exists( 'WPFactory\Promoting_Notice' ) ) {
 
 				<?php echo esc_attr($notice_selector); ?>
 				.wpfactory-pan-plugin-icon {
-					<?php echo $image_rendering_style; ?>
+				<?php echo $image_rendering_style; ?>
 				<?php echo esc_attr($args['template_variables']['%plugin_icon_style%']); ?>
 				}
 
