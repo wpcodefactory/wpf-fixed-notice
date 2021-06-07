@@ -62,8 +62,10 @@ enable | `true` |  Enables the notice or not
 notice_template | `'<div id="message" class="%notice_class%"><p class="wpfactory-pan-p">%content_template%</p></div>'` | The whole notice template
 lib_dirname | `dirname( __FILE__, 2 )` | The directory of the project
 highlight_notice_on_disabled_opt_click | `true` | Makes the disabled features that may get clicked point to the promoting notice
-template_variables | [Documentation](https://github.com/wpcodefactory/wpf-promoting-notice/wiki/Template-variable-parameters) | Template variables you can use
+url_requirements | `array( 'page_filename' => 'admin.php', 'params' => array() )` | URL requirements in order to display the notice
 optimize_plugin_icon_contrast | `false` | Improves the plugin icon img contrast
+display_action | `'admin_notices'` or `'woocommerce_sections_' . $tab` | The action hook used to display the notice
+template_variables | [Documentation](https://github.com/wpcodefactory/wpf-promoting-notice/wiki/Template-variable-parameters) | Template variables you can use
 
 ### See it in action
 https://user-images.githubusercontent.com/70968619/119685412-b8473180-be1b-11eb-829d-216e1895c8da.mp4
