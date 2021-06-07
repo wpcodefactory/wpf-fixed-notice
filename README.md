@@ -35,7 +35,10 @@ add_action( 'admin_init', 'add_promoting_notice' );
 function add_promoting_notice(){
 	$promoting_notice = wpf_promoting_notice();
 	$promoting_notice->set_args( array(
-		'woocommerce_section_id'        => 'alg_wc_ev',
+		'url_requirements'              => array(
+			'page_filename' => 'admin.php',
+			'params'        => array( 'page' => 'wc-settings', 'tab' => 'alg_wc_ev' ),
+		),
 		'enable'                        => true, // Probably you should apply some custom filter here that only returns true on free version
 		'optimize_plugin_icon_contrast' => true // Use true here if the plugin icon is blurry
 		'template_variables'     => array(
@@ -56,8 +59,7 @@ function add_promoting_notice(){
 Parameter | Default value | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Description &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 ------------ | ------------- | ------------
 enable | `true` |  Enables the notice or not
-woocommerce_section_id | `''` | WooCommerce section id
-notice_template | `'<div id="message" class="%dynamic_notice_class% wpf-promoting-notice notice notice-info inline"><p class="wpf-pan-p">%content_template%</p></div>'` | The whole notice template
+notice_template | `'<div id="message" class="%notice_class%"><p class="wpfactory-pan-p">%content_template%</p></div>'` | The whole notice template
 lib_dirname | `dirname( __FILE__, 2 )` | The directory of the project
 highlight_notice_on_disabled_opt_click | `true` | Makes the disabled features that may get clicked point to the promoting notice
 template_variables | [Documentation](https://github.com/wpcodefactory/wpf-promoting-notice/wiki/Template-variable-parameters) | Template variables you can use
