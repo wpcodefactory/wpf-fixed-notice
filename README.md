@@ -65,6 +65,7 @@ highlight_notice_on_disabled_opt_click | `true` | Makes the disabled features th
 template_variables | [Documentation](https://github.com/wpcodefactory/wpf-promoting-notice/wiki/Template-variable-parameters) | Template variables you can use
 url_requirements | `array( 'page_filename' => 'admin.php', 'params' => array() )` | URL requirements in order to display the notice
 optimize_plugin_icon_contrast | `false` | Improves the plugin icon img contrast
+display_action | `admin_notices` or `'woocommerce_sections_' . $tab` | The action hook used to display the notice
 
 ### See it in action
 https://user-images.githubusercontent.com/70968619/119685412-b8473180-be1b-11eb-829d-216e1895c8da.mp4
