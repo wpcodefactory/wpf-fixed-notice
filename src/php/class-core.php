@@ -2,7 +2,7 @@
 /**
  * WPFactory Promoting Notice - Functions.
  *
- * @version 1.0.3
+ * @version 1.0.4
  * @since   1.0.0
  * @author  WPFactory
  */
@@ -89,7 +89,7 @@ if ( ! class_exists( 'WPFactory\Promoting_Notice' ) ) {
 		/**
 		 * init.
 		 *
-		 * @version 1.0.3
+		 * @version 1.0.4
 		 * @since   1.0.0
 		 */
 		function init() {
@@ -108,7 +108,7 @@ if ( ! class_exists( 'WPFactory\Promoting_Notice' ) ) {
 			) {
 				add_action( 'admin_head', array( $this, 'create_style' ) );
 				add_action( 'admin_head', array( $this, 'highlight_notice_on_disabled_setting_click' ) );
-				add_action( $args['action_hook'], array( $this, 'create_notice' ) );
+				add_action( $args['display_action'], array( $this, 'create_notice' ) );
 			}
 		}
 
