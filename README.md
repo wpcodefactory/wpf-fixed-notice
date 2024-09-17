@@ -40,7 +40,7 @@ function add_promoting_notice(){
 			'params'        => array( 'page' => 'wc-settings', 'tab' => 'alg_wc_ev' ),
 		),
 		'enable'                        => true, // Probably you should apply some custom filter here that only returns true on free version
-		'optimize_plugin_icon_contrast' => true // Use true here if the plugin icon is blurry
+		'optimize_plugin_icon_contrast' => true, // Use true here if the plugin icon is blurry
 		'template_variables'     => array(
 			'%pro_version_url%'    => 'https://wpfactory.com/item/email-verification-for-woocommerce/',
 			'%plugin_icon_url%'    => 'https://ps.w.org/emails-verification-for-woocommerce/assets/icon-128x128.png',
