@@ -33,7 +33,7 @@ Don't forget to require the `autoload.php` to your project, as it's required for
 ```php
 add_action( 'admin_init', 'add_promoting_notice' );
 function add_promoting_notice(){
-	$promoting_notice = wpf_promoting_notice();
+	$promoting_notice = wpfactory_promoting_notice();
 	$promoting_notice->set_args( array(
 		'url_requirements'              => array(
 			'page_filename' => 'admin.php',
